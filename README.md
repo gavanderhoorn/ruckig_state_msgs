@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ruckig's internal state as a ROS message.
+[Ruckig](https://github.com/pantor/ruckig)'s internal state as a ROS message.
 
 Fields (and sometimes comments) taken from:
 
