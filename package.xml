@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ruckig_state_msgs</name>
+  <version>0.1.0</version>
+  <description>Messages to publish internal state of Ruckig trajectory generators</description>
+  <author>G.A. vd. Hoorn</author>
+  <maintainer email="g.a.vanderhoorn@tudelft.nl">G.A. vd. Hoorn</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_export_depend>message_runtime</build_export_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>std_msgs</depend>
+
+  <!-- not stating the dependency on robotpy-cppheaderparser here, as it's only
+       used by the maintainer of this package, and is not a runtime requirement
+       for the messages themselves.
+  -->
+</package>
