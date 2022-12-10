@@ -50,12 +50,12 @@ constexpr auto toUnderlying(EnumT const& e) noexcept
 namespace ruckig_state_msgs {
 
 
-template <typename RuckigResultT, typename RuckigT>
+template <typename RuckigResultT, typename RuckigT, typename RuckigInputT, typename RuckigOutputT>
 void toRosMessage(
   RuckigResultT const& result,
   RuckigT const& otg,
-  typename RuckigT::Input const& rinput,
-  typename RuckigT::Output const& routput,
+  RuckigInputT const& rinput,
+  RuckigOutputT const& routput,
   ruckig_state_msgs::InternalState& msg
 )
 {
@@ -66,7 +66,7 @@ void toRosMessage(
 
   msg.work_result.value = result;
 
-  msg.active_interface.value = toUnderlying(rinput.interface);
+  msg.active_control_interface.value = toUnderlying(rinput.control_interface);
   msg.active_synchronization.value = toUnderlying(rinput.synchronization);
   msg.active_duration_discretisation.value = toUnderlying(rinput.duration_discretization);
 
@@ -103,12 +103,12 @@ void toRosMessage(
 }
 
 
-template <typename RuckigResultT, typename RuckigT>
+template <typename RuckigResultT, typename RuckigT, typename RuckigInputT, typename RuckigOutputT>
 ruckig_state_msgs::InternalState toRosMessage(
   RuckigResultT const& result,
   RuckigT const& otg,
-  typename RuckigT::Input const& rinput,
-  typename RuckigT::Output const& routput
+  RuckigInputT const& rinput,
+  RuckigOutputT const& routput
 )
 {
   ruckig_state_msgs::InternalState msg;

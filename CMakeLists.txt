@@ -12,7 +12,7 @@ add_message_files(
     msg
   FILES
     DurationDiscretization.msg
-    Interface.msg
+    ControlInterface.msg
     InternalState.msg
     Result.msg
     Synchronization.msg

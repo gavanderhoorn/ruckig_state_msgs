@@ -35,7 +35,7 @@ float64 delta_time
 Result work_result
 
 # Active type of control (position, velocity, ..)
-Interface active_interface
+ControlInterface active_control_interface
 
 # Active type of synchronization
 Synchronization active_synchronization
